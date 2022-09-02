@@ -1,6 +1,3 @@
-import random
-import discord
-from discord import Game
 from discord.ext import commands
 from discord.ext.commands.errors import CommandNotFound
 import interactions
