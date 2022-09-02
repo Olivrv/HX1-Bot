@@ -4,9 +4,6 @@ from discord import Game
 from discord.ext import commands
 from discord.ext.commands.errors import CommandNotFound
 import interactions
-"""
-from discord_slash import SlashCommand, SlashContext
-from discord_slash.utils.manage_commands import create_option"""
 from config import TOKEN
 
 
@@ -19,6 +16,14 @@ emojis_code = {1: '1️⃣', 2: "2️⃣", 3: "3️⃣", 4: "4️⃣", 5: "5️�
 games = ["Centrale", "Les Mines", "L'X", "Démombrer l'infini", "Des maths"]
 other_bot_commands = []
 bot = interactions.Client(token=TOKEN)
+
+
+@bot.command(name='hello', description="Say hello.")
+async def hello(ctx: interactions.CommandContext):
+    await ctx.send(f"Hi there {ctx.author.mention}!")
+
+
+@bot.command()
 
 
 @bot.event

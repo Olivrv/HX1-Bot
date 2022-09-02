@@ -9,7 +9,7 @@ Le bot du server d'HX1, codé en python par la classe.
 - [Informations](https://https://github.com/Olivrv/HX1-Bot#informations)
 - [Auteurs](https://https://github.com/Olivrv/HX1-Bot#auteurs)
 ## Commandes:
-- 
+- Hello -> renvoie Bonjour @sender
 
 
 
