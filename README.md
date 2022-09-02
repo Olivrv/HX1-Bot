@@ -15,21 +15,20 @@ Le bot du server d'HX1, codé en python par la classe.
 
 ## Contribuer
 
-Contributions are always welcome!
+Venez coder en python ! C'est l'occasion d'apprendre.
 
-See `contributing.md` for ways to get started.
+Clonez la repository github, et ajoutez des fonctionalités selon vos envies. 
 
-Please adhere to this project's `code of conduct`.
+Demandez à recevoir le rôle de "dev" et posez des questions et réalisez des tests sur la chaine discord correspondante.
 
 
 ## Authors
 
-- [@katherinepeterson](https://www.github.com/octokatherine)
+- [@olivrv](https://www.github.com/olivrv)
 
 
 ## Roadmap
 
-- Additional browser support
+- pas de spam
 
-- Add more integrations
-
+- commande de ...
