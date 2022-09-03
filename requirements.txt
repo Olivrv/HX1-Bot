@@ -1,2 +1,2 @@
 discord.py
-discord
+discord~=2.0.0
