@@ -2,7 +2,6 @@ import discord
 from discord.ext.commands.errors import CommandNotFound
 import interactions
 import asyncio
-from interactions import presence
 from config import TOKEN
 
 
@@ -23,15 +22,15 @@ async def hello(ctx: interactions.CommandContext):
 @bot.command(name="hack", description="hack a player",
              options=[interactions.Option(name="player", type=interactions.OptionType.USER,
                                           required=True, description='player to hack')])
-async def hack(ctx: interactions.CommandContext, player: str):
-    await ctx.send(f"Hacking {player}...")
+async def hack(ctx: interactions.CommandContext, player):
+    msg = await ctx.send(f"Hacking {player}...")
     t = 2
-    if ctx.author == player:
-        await ctx.send("Initialising... Wait, no! You can't hack yourself.")
-    elif str(player) == str(bot.me.name):
-        await ctx.send(f"Initialising... Breached {str(bot.me.name)}... Hold on a minute... No!")
+    if ctx.author.id == player.id:
+        await msg.edit("Initialising... Wait, no! You can't hack yourself.")
+    elif player.id == bot.me.id:
+        await msg.edit(f"Initialising... Breached {player}... Hold on a minute... No!")
     else:
-        msg = await ctx.send(f"Launching hacking protocols against {player}...")
+        await msg.edit(f"Launching hacking protocols against {player}...")
         await asyncio.sleep(t)
         await msg.edit(content="Breaching firewalls...")
         await asyncio.sleep(t)
@@ -60,7 +59,6 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.me.name}")
-    # await bot.change_presence(presence=presence.ClientPresence(activities=presence.PresenceActivity(name="Minecraft")))
 
 
 @bot.event
