@@ -9,7 +9,7 @@ emojis = {1: ":one:", 2: ":two:", 3: ":three:", 4: ":four:", 5: ":five:", 6: ":s
           8: ":eight:", 9: ":nine:", 10: ":keycap_ten:"}
 emojis_code = {1: '1️⃣', 2: "2️⃣", 3: "3️⃣", 4: "4️⃣", 5: "5️⃣", 6: "6️⃣", 7: "7️⃣",
                8: "8️⃣", 9: "9️⃣", 10: "🔟"}
-games = ["Centrale", "Les Mines", "L'X", "Dénombrer l'infini", "Des maths"]
+games = ["à Centrale", "aux Mines", "à l'X", "à dénombrer l'infini", "à faire des maths"]
 other_bot_commands = []
 bot = interactions.Client(token=TOKEN)
 
@@ -48,6 +48,10 @@ async def hack(ctx: interactions.CommandContext, player):
         await asyncio.sleep(t)
         await msg.edit(content=f"Successfully hacked {player}.")
 
+
+@bot.command(name='pierre', description="Maya... EEEEEEEEEEEEEE", )
+async def pierre(ctx: interactions.CommandContext):
+    await ctx.send("https://www.youtube.com/watch?v=n_K-Q2HdmaI&ab_channel=IngoSchmit")
 
 @bot.event
 async def on_command_error(ctx, error):
